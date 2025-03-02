@@ -1,0 +1,1 @@
+//contains some functions to for streamlineability

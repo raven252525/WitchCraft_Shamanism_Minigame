@@ -1,0 +1,1 @@
+// contains constants, dialogue, scaling in the project
