@@ -15,3 +15,8 @@ k.loadSprite("spritesheet", "./spritesheet.png", {
         "walk-down" : { from: 1014, to: 1017, loop:true, speed: 8},
     },
 });
+
+//import map sprite 
+k.loadSprite("map", "./map.png")
+
+k.setBackground(k.Color.fromHex("#311047"))
