@@ -63,7 +63,10 @@ k.scene("main", async () => {
                     });
                 }
             }
-        } else if (layer.name === "spawnpoints") {
+            continue;
+        } 
+        
+        if (layer.name === "spawnpoints") {
             for (const entity of layer.objects) {
                 if (entity.name === "player") {
                     player.pos = k.vec2(
@@ -71,6 +74,7 @@ k.scene("main", async () => {
                         (map.pos.y + entity.y) * scaleFactor
                     );
                     k.add(player);
+                    continue;
                 }
             }
         }
@@ -78,6 +82,14 @@ k.scene("main", async () => {
 
     k.onUpdate(() => {
         k.camPos(player.pos.x, player.pos.y + 100);
+    });
+
+
+    k.onMouseDown((mouseBtn) => {
+        if (mouseBtn !== "left" || player.isInDialogue) return;
+
+        const worldMousePos = k.toWorld(k.mousePos());
+        player.moveTo(worldMousePos, player.speed);
     });
 });
 
