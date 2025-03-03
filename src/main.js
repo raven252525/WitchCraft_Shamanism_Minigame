@@ -1,7 +1,8 @@
+import { scaleFactor } from "./constants";
 import { k } from "./kaboomCtx";
 
-//function to load img as a sprite, and can dictate frames to use, veets allows direct acccess via .
-//3rd param is an obj that specifics how to slice img into frames
+// function to load img as a sprite, and can dictate frames to use, veets allows direct acccess via .
+// 3rd param is an obj that specifics how to slice img into frames
 k.loadSprite("spritesheet", "./spritesheet.png", {
     sliceX: 39,
     sliceY: 31,
@@ -16,7 +17,41 @@ k.loadSprite("spritesheet", "./spritesheet.png", {
     },
 });
 
-//import map sprite 
+// import map sprite 
 k.loadSprite("map", "./map.png")
 
 k.setBackground(k.Color.fromHex("#311047"))
+
+// first scene, async bc we need the map.json data via fetch call
+k.scene("main", async () => {
+    //function that occurs in scene
+
+    // we await bc fetch is asnyc, so we wana wait until 
+    // fetch(basic Web API) is done to continue, then jsonify
+    const mapData = await (await fetch("./map.png")).json()
+    const layers = mapData.layers
+
+    // first game obj, has a collection of components(arrays), ex: position, players, props,
+    // that determine properties of how obj acts - MUST CALL ADD AFTER TO DISPLAY
+    const map = k.make([k.sprite("map"), k.pos(0), k.scale(scaleFactor)])
+
+    const player = k.make([k.sprite("spritesheet"),
+        {anims: "idle-down"}, 
+        k.area({
+            shape: new k.Rect(k.vec2(0,3), 10, 10) // drawing hitbox, using vectors for x y coord, and goes from player out 3
+        }),
+        k.body(),
+        k.anchor("center"),
+        k.pos(),
+        k.scale(scaleFactor),
+        {
+            speed: 250,
+            direction: "down",
+            isInDialogue: false,
+        },
+        "player", // tag for oncolide function, to be able to see which objects collided with what
+    ])
+})
+
+//specifies default scene
+k.go("main")

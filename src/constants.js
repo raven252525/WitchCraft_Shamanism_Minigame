@@ -1,1 +1,1 @@
-// contains constants, dialogue, scaling in the project
+export const scaleFactor = 4
