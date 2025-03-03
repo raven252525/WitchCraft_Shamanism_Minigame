@@ -1,5 +1,6 @@
 import { scaleFactor } from "./constants";
 import { k } from "./kaboomCtx";
+import { displayDialogue } from "./utils";
 
 // function to load img as a sprite, and can dictate frames to use, veets allows direct acccess via .
 // 3rd param is an obj that specifics how to slice img into frames
@@ -68,8 +69,22 @@ k.scene("main", async () => {
                     // set collision events btwn player and boundary.name
                     player.onCollide(boundary.name, () => {
                         player.isInDialogue = true; // prevents player from moving when text box
-                        // TODO
+                        displayDialogue("TODO", () => (player.isInDialogue = false))
                     });
+                }
+            }
+            continue
+        }
+        
+        if (layer.name === "spawnpoints") {
+            for (const entity of layer.objects) {
+                if (entity.name === "player") {
+                    player.pos = k.vec2(
+                        (map.pos.x + entity.x) * scaleFactor,
+                        (map.pos.y + entity.y) * scaleFactor
+                    )
+                    k.add(player)
+                    continue
                 }
             }
         }
