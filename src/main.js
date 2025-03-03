@@ -51,6 +51,29 @@ k.scene("main", async () => {
         },
         "player", // tag for oncolide function, to be able to see which objects collided with what
     ])
+
+    for (const layer of layers) {
+        if (layer.name === "boundaries") {
+            for (const boundary of layer.objects) {
+                map.add([//adding extra child function to map game obj
+                    k.area({
+                        shape: new k.Rect(vsc2(0), boundary.width, boundary.height),
+                    }), // creation of shape 
+                    k.body({isStatic: true}),// player will not be able to overlap with this(for walls)
+                    k.pos(boundary.x, boundary.y), // pos of obj
+                    boundary.name, // tag of game obj
+                ])
+              
+                if (boundary.name) {
+                    // set collision events btwn player and boundary.name
+                    player.onCollide(boundary.name, () => {
+                        player.isInDialogue = true; // prevents player from moving when text box
+                        // TODO
+                    });
+                }
+            }
+        }
+    }
 })
 
 //specifies default scene
