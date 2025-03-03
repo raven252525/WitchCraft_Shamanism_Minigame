@@ -19,9 +19,9 @@ k.loadSprite("spritesheet", "./spritesheet.png", {
 });
 
 // import map sprite 
-k.loadSprite("map", "./map.png")
+k.loadSprite("map", "./map.png");
 
-k.setBackground(k.Color.fromHex("#311047"))
+k.setBackground(k.Color.fromHex("#311047"));
 
 // first scene, async bc we need the map.json data via fetch call
 k.scene("main", async () => {
@@ -29,15 +29,15 @@ k.scene("main", async () => {
 
     // we await bc fetch is asnyc, so we wana wait until 
     // fetch(basic Web API) is done to continue, then jsonify
-    const mapData = await (await fetch("./map.png")).json()
-    const layers = mapData.layers
+    const mapData = await (await fetch("./map.png")).json();
+    const layers = mapData.layers;
 
     // first game obj, has a collection of components(arrays), ex: position, players, props,
     // that determine properties of how obj acts - MUST CALL ADD AFTER TO DISPLAY
-    const map = k.make([k.sprite("map"), k.pos(0), k.scale(scaleFactor)])
+    const map = k.add([k.sprite("map"), k.pos(0), k.scale(scaleFactor)]);
 
-    const player = k.make([k.sprite("spritesheet"),
-        {anims: "idle-down"}, 
+    const player = k.make([
+        k.sprite("spritesheet",{anims: "idle-down"}), 
         k.area({
             shape: new k.Rect(k.vec2(0,3), 10, 10) // drawing hitbox, using vectors for x y coord, and goes from player out 3
         }),
@@ -51,7 +51,7 @@ k.scene("main", async () => {
             isInDialogue: false,
         },
         "player", // tag for oncolide function, to be able to see which objects collided with what
-    ])
+    ]);
 
     for (const layer of layers) {
         if (layer.name === "boundaries") {
@@ -73,7 +73,9 @@ k.scene("main", async () => {
                     });
                 }
             }
-            continue
+
+
+            continue;
         }
         
         if (layer.name === "spawnpoints") {
@@ -82,13 +84,17 @@ k.scene("main", async () => {
                     player.pos = k.vec2(
                         (map.pos.x + entity.x) * scaleFactor,
                         (map.pos.y + entity.y) * scaleFactor
-                    )
-                    k.add(player)
-                    continue
+                    );
+                    k.add(player);
+                    continue;
                 }
             }
         }
     }
+
+    k.onUpdate(() => {
+        k.camPos(player.pos.x, player.pos.y + 100)
+    })
 })
 
 //specifies default scene
