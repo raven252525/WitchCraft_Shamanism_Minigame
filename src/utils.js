@@ -32,5 +32,5 @@ export function displayDialogue(text, onDisplayEnd) {
         closeBtn.removeEventListener("click", onCloseBtnClick);
     }
     
-    closeBtn.addEventListener("click". onCloseBtnClick);
+    closeBtn.addEventListener("click", onCloseBtnClick);
 }

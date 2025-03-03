@@ -29,7 +29,7 @@ k.scene("main", async () => {
     const map = k.add([k.sprite("map"), k.pos(0), k.scale(scaleFactor)]);
 
     // Add the player sprite
-    const player = k.add([
+    const player = k.make([
         k.sprite("spritesheet", {frame: 936}, { anims: "idle-down" }), 
         k.area({ shape: new k.Rect(k.vec2(0, 3), 10, 10) }),
         k.body(),
