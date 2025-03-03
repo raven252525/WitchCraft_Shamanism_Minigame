@@ -29,14 +29,14 @@ k.scene("main", async () => {
 
     // we await bc fetch is asnyc, so we wana wait until 
     // fetch(basic Web API) is done to continue, then jsonify
-    const mapData = await (await fetch("./map.png")).json();
+    const mapData = await (await fetch("./map.json")).json();
     const layers = mapData.layers;
 
     // first game obj, has a collection of components(arrays), ex: position, players, props,
     // that determine properties of how obj acts - MUST CALL ADD AFTER TO DISPLAY
     const map = k.add([k.sprite("map"), k.pos(0), k.scale(scaleFactor)]);
 
-    const player = k.make([
+    const player = k.add([
         k.sprite("spritesheet",{anims: "idle-down"}), 
         k.area({
             shape: new k.Rect(k.vec2(0,3), 10, 10) // drawing hitbox, using vectors for x y coord, and goes from player out 3
@@ -86,7 +86,7 @@ k.scene("main", async () => {
                         (map.pos.y + entity.y) * scaleFactor
                     );
                     k.add(player);
-                    continue;
+                    //continue;
                 }
             }
         }
