@@ -1,7 +1,7 @@
 import { defineConfig } from "vite";
 
 export default defineConfig({
-    base: "/Shamanism-Minigam-project",
+    base: "./",
     build: {
         minify: "terser",
     },
