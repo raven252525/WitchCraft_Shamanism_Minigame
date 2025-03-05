@@ -97,6 +97,59 @@ k.scene("main", async () => {
 
         const worldMousePos = k.toWorld(k.mousePos());
         player.moveTo(worldMousePos, player.speed);
+
+        // gives position of angle of mouse in context to player
+        const mouseAngle = player.pos.angle(worldMousePos);
+
+        const lowerBound = 50;
+        const upperBound = 125;
+
+
+        // if mouse is within a certain angle in the upward dir, upward animation happens
+        if (
+            mouseAngle > lowerBound &&
+            mouseAngle < upperBound &&
+            player.curAnim() !== "walk-up"
+        ) {
+            player.play("walk-up");
+            player.direction = "up";
+            return;
+        }
+
+        // Determine movement direction based on mouse angle
+        if (
+            mouseAngle > lowerBound && 
+            mouseAngle < upperBound && 
+            player.curAnim() !== "walk-up"
+        ) {
+            player.play("walk-up");
+            player.direction = "up";
+            return;
+        }
+
+        if (
+            mouseAngle < -lowerBound && 
+            mouseAngle > -upperBound && 
+            player.curAnim() !== "walk-down"
+        ) {
+            player.play("walk-down");
+            player.direction = "down";
+            return;
+        }
+
+        if(Math.abs(mouseAngle) > upperBound) {
+            player.flipX = false;
+            if (player.curAnim() !== "walk-side") player.play("walk-side");
+            player.direction = "right";
+            return;
+        }
+
+        if(Math.abs(mouseAngle) < lowerBound) {
+            player.flipX = true;
+            if (player.curAnim() !== "walk-side") player.play("walk-side");
+            player.direction = "left";
+            return;
+        }
     });
 });
 
