@@ -37,10 +37,7 @@ export function displayDialogue(text, onDisplayEnd) {
 
 export function setCamScale(k) {
     const resizeFactor = k.width() / k.height();
-    if (resizeFactor < 1) {
-        k.setCamScale(k.vec2(1));
-        return;
-    }
-
-    k.setCamScale(k.vec2(1.5));
+    
+    // adjust the camera zoom
+    k.camScale(resizeFactor >= 1 ? 1 : 1.5);
 }
