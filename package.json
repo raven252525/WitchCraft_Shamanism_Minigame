@@ -1,7 +1,6 @@
 {
   "name": "vanilla",
   "private": true,
-  "homepage": "https://raven252525.github.io/",
   "version": "0.0.0",
   "type": "module",
   "scripts": {

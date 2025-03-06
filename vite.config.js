@@ -1,7 +1,7 @@
 import { defineConfig } from "vite";
 
 export default defineConfig({
-    base: "/raven252525.io",
+    base: "/WitchCraft_Shamanism_Minigame",
     build: {
         minify: "terser",
     },
