@@ -29,10 +29,11 @@ export const dialogueData = {
     You are paranoid, extremely nervous, and begin to experience panic attacks. 
     You gotta keep moving forward`,
     wise_trees: ` The wise trees urge you to seek the help of babka. `,
-    chest_explainin_babka: ` You have reached babka’s hut! Babka, or “granny”, 
+    
+    chest: ` You have reached babka’s hut! Babka, or “granny”, 
     is a Ukrainian folk healer who performs magico-religious rituals to treat a variety 
     of physical and spiritual illnesses, such as evil eye, curses, and fortunately for you, 
-    liak! Maybe she can help?`,
+    liak! Maybe she can help? `,
     babka: `Babka examines you thoroughly and decides to perform the magic wax ritual. 
     She gives you comforting words, holds a bowl of cold water over your head, 
     pours wax into it while repeating incantations, then loosens the hardened wax with a 
