@@ -39,5 +39,5 @@ export function setCamScale(k) {
     const resizeFactor = k.width() / k.height();
     
     // adjust the camera zoom
-    k.camScale(4);
+    k.camScale(2);
 }
