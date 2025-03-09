@@ -339,7 +339,7 @@
                 {
                  "height":32,
                  "id":93,
-                 "name":"talking tree",
+                 "name":"talking_tree",
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -350,7 +350,7 @@
                 {
                  "height":16,
                  "id":96,
-                 "name":"wise trees",
+                 "name":"wise_trees",
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -405,7 +405,7 @@
                 {
                  "height":16,
                  "id":135,
-                 "name":" chest\/explaining babka",
+                 "name":" chest_explainin_babka",
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -825,7 +825,7 @@
                 {
                  "height":32,
                  "id":202,
-                 "name":"herbalist's hut_1",
+                 "name":"herbalist_hut_1",
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -858,7 +858,7 @@
                 {
                  "height":16,
                  "id":210,
-                 "name":"herbalist's hut_2",
+                 "name":"herbalist_hut_2",
                  "rotation":0,
                  "type":"",
                  "visible":true,
