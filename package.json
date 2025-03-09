@@ -16,6 +16,7 @@
   },
   "dependencies": {
     "gh-pages": "^6.3.0",
-    "kaboom": "^3000.1.17"
+    "kaboom": "^3000.1.17",
+    "remix": "^2.16.0"
   }
 }
