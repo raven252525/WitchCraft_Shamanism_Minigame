@@ -29,7 +29,6 @@ export const dialogueData = {
     You are paranoid, extremely nervous, and begin to experience panic attacks. 
     You gotta keep moving forward`,
     wise_trees: ` The wise trees urge you to seek the help of babka. `,
-    
     chest: ` You have reached babka’s hut! Babka, or “granny”, 
     is a Ukrainian folk healer who performs magico-religious rituals to treat a variety 
     of physical and spiritual illnesses, such as evil eye, curses, and fortunately for you, 
