@@ -27,7 +27,7 @@ k.scene("main", async () => {
     const layers = mapData.layers;
 
     // Add the map sprite
-    const map = k.add([k.sprite("map"), k.pos(0), k.scale(2)]);
+    const map = k.add([k.sprite("map"), k.pos(0), k.scale(scaleFactor)]);
 
     // Add the player sprite
     const player = k.make([
