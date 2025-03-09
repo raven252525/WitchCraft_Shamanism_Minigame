@@ -332,12 +332,12 @@
                  "rotation":0,
                  "type":"",
                  "visible":true,
-                 "width":16,
-                 "x":240,
+                 "width":48,
+                 "x":208,
                  "y":0
                 }, 
                 {
-                 "height":16,
+                 "height":32,
                  "id":93,
                  "name":"talking tree",
                  "rotation":0,
@@ -345,7 +345,7 @@
                  "visible":true,
                  "width":16,
                  "x":112,
-                 "y":32
+                 "y":16
                 }, 
                 {
                  "height":16,
@@ -825,23 +825,12 @@
                 {
                  "height":32,
                  "id":202,
-                 "name":"herbalist's hut",
+                 "name":"herbalist's hut_1",
                  "rotation":0,
                  "type":"",
                  "visible":true,
                  "width":48,
                  "x":32,
-                 "y":32
-                }, 
-                {
-                 "height":16,
-                 "id":203,
-                 "name":"herbalist's hut",
-                 "rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":16,
-                 "x":80,
                  "y":32
                 }, 
                 {
@@ -858,7 +847,7 @@
                 {
                  "height":16,
                  "id":205,
-                 "name":"counter_intuitive",
+                 "name":"counter_intuitive_2",
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -868,18 +857,18 @@
                 }, 
                 {
                  "height":16,
-                 "id":207,
-                 "name":"",
+                 "id":210,
+                 "name":"herbalist's hut_2",
                  "rotation":0,
                  "type":"",
                  "visible":true,
-                 "width":32,
-                 "x":208,
-                 "y":0
+                 "width":16,
+                 "x":80,
+                 "y":32
                 }, 
                 {
                  "height":16,
-                 "id":208,
+                 "id":213,
                  "name":"",
                  "rotation":0,
                  "type":"",
@@ -895,7 +884,7 @@
          "y":0
         }],
  "nextlayerid":14,
- "nextobjectid":209,
+ "nextobjectid":214,
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tiledversion":"1.11.2",
