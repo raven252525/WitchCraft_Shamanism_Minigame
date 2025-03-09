@@ -1,4 +1,12 @@
 { "compressionlevel":-1,
+ "editorsettings":
+    {
+     "export":
+        {
+         "format":"json",
+         "target":"map.tmj"
+        }
+    },
  "height":13,
  "infinite":false,
  "layers":[
@@ -149,7 +157,7 @@
         {
          "draworder":"topdown",
          "id":9,
-         "name":"spawnpoint",
+         "name":"spawnpoints",
          "objects":[
                 {
                  "height":0,
