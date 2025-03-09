@@ -2,23 +2,47 @@ export const scaleFactor = 4
 
 // JSON file to match the name of the object boundaries
 export const dialogueData = {
-    pc: `This is my PC. I work mostly in JavaScript/TypeScript these days.
-      I've made a couple of games in that language. I also like Golang and Python. Anyway regardless of the language, I just like programming.
-      Here is my <a href="https://github.com/jslegenddev" target="_blank">Github</a>!`,
-    "cs-degree": `This is my CS degree. I hung it on the wall because I'm proud of it. It was a very theoretical degree but I think it gave me a good foundation.`,
-    "sofa-table": `That's my sofa. I like to relax here and watch YouTube. 
-    I also make game programming tutorials on YouTube. Go sub to <a href="https://youtube.com/@jslegenddev" target="_blank">my channel</a>! (If you like the content)
-    You'll learn how I built this portfolio you're currently playing through!`,
-    tv: `That's my TV. I've been watching tech youtubers a lot recently like :
-     <a href="https://www.youtube.com/@ThePrimeTimeagen" target="_blank">Theprimeagen</a>, <a href="https://www.youtube.com/@t3dotgg" target="_blank">Theo - t3.gg</a>,
-    <a href="https://www.youtube.com/@PirateSoftware" target="_blank">PirateSoftware</a> (sometimes) and <a href="https://www.youtube.com/@MelkeyDev" target="_blank">Melkey</a>!`,
-    bed: `This where I sleep. Great ideas comes when I'm lying on my bed. When an idea strikes, I often have to write it down or else I won't be able to sleep because my mental energy is consumed by it.`,
-    resume: `This is my desk and on it is my resume. <a href="https://github.com/JSLegendDev/Resume/blob/main/JSLegend%20Resume-1.pdf" target="_blank">Check it out?</a>
-    Contact me at jslegend@protonmail.com if you have any interesting job opportunities!`,
-    projects: `Info about this portfolio : It's made with the Kaboom.js library which is a library for making games in JavaScript.
-    Text is rendered with HTML/CSS. So the textbox you're currently reading is not rendered within canvas. Learn more about how to use
-    Kaboom.js by watching some of my tutorials <a href="https://youtube.com/@jslegenddev" target="_blank">here</a>.`,
-    library: `There are a lot of programming books on my shelves. There is even one in French (I also speak French btw).
-    I probably only read one of them. Who else compulsively buys technical books without ever finishing them?`,
-    exit: `If you want to exit JSLegendDev's portfolio, just close the tab.`,
-  };
+    Mushroom:  `You come across a yummy mushroom in the forest and decide to eat it!
+    Unfortunately, it makes you nauseous and your stomach starts to hurt.`,
+    herbalist_hut_1: ` Don’t worry! The herbalist is here to help, 
+    and lucky for you, plants are most often used to heal digestive
+    issues He gives you a funky tasting, green medicine and sends you on your merry way. 
+    Your stomach feels a lot better! `,
+    herbalist_hut_2: ` Don’t worry! The herbalist is here to help, 
+    and lucky for you, plants are most often used to heal digestive
+    issues He gives you a funky tasting, green medicine and sends you on your merry way. 
+    Your stomach feels a lot better! `,
+    talking_tree:`You bump into a tree and it begins to speak, 
+    “Herbal medicine most often focuses on treating digestive ailments 
+    because they are especially common, and plants naturally produce antimicrobials 
+    and antifungals for humans to use.” You remember this tree and his words well, but why?`,
+    counter_intuitive: `Aha! You realize the talking tree is minimally counterintuitive. 
+    Concepts with 1-2 elements that violate our intuitive expectations 
+    are more memorable and therefore transmitted more often! `,
+    counter_intuitive_2: `Aha! You realize the talking tree is minimally counterintuitive. 
+    Concepts with 1-2 elements that violate our intuitive expectations 
+    are more memorable and therefore transmitted more often! `,
+    Crocky: `Uh oh. A spirit, a supernatural entity that exists independent of a 
+    physical body, crosses your path and almost scares you to death! In nearly every 
+    society, people attribute some illnesses to spirits, and unfortunately, 
+    you develop the Ukrainian disease liak (“fear sickness”) as a result of the scare. 
+    You are paranoid, extremely nervous, and begin to experience panic attacks. 
+    You gotta keep moving forward`,
+    wise_trees: ` The wise trees urge you to seek the help of babka. `,
+    chest_explainin_babka: ` You have reached babka’s hut! Babka, or “granny”, 
+    is a Ukrainian folk healer who performs magico-religious rituals to treat a variety 
+    of physical and spiritual illnesses, such as evil eye, curses, and fortunately for you, 
+    liak! Maybe she can help?`,
+    babka: `Babka examines you thoroughly and decides to perform the magic wax ritual. 
+    She gives you comforting words, holds a bowl of cold water over your head, 
+    pours wax into it while repeating incantations, then loosens the hardened wax with a 
+    knife and interprets the shapes. She remelts the wax and performs the ritual twice more, 
+    holding the bowl over your shoulders, then your knees and hands. After the final pouring, 
+    she washes you with water and prays to God, Jesus, and the Holy spirit. 
+    You feel much better! `,
+    scholar: `You found the scholar! He annoyingly decides to explain to you why Babka’s magic works. 
+    “Her rituals have many steps, much repetition, and involve religious figures. 
+    This increases your intuition of efficacy of her magic!” Thanks, I guess? 
+    
+    <h1>THE END</h1>`,
+};
